@@ -1,0 +1,31 @@
+/* Write your CSS here */
+
+.item-card {
+  display: flex;
+  width: 33%;
+  font-family: Roboto;
+  border-radius: 15px;
+  border: 1px solid #b5b7c4;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.appointment-title {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+}
+.appointment-date {
+  color: #b5b7c4;
+}
+
+.starred-btn-section {
+  align-self: flex-start;
+}
+
+.starred-btn-in-card {
+  background-color: transparent;
+  border: none;
+  margin: 15px;
+}

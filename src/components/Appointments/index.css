@@ -1,0 +1,105 @@
+/* Write your CSS here */
+
+.bg-container {
+  background-image: linear-gradient(to top, #9796f0, #fbc7d4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.app-container {
+  background-color: white;
+  height: max-content;
+  width: 90%;
+  border-radius: 15px;
+  font-family: Roboto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-section {
+  width: 40%;
+  height: max-content;
+  padding: 15px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+.appointment-field {
+  border-radius: 5px;
+  padding: 15px;
+}
+
+label {
+  color: #b5b7c4;
+}
+
+.image-section {
+  width: 60%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.add-btn {
+  border: none;
+  background-color: #8b5cf9;
+  color: white;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.seperator {
+  width: 100%;
+}
+
+.add-app-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.appointments-section {
+  padding: 15px;
+}
+
+.title-and-btn {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.starred-btn {
+  align-self: center;
+  padding: 10px;
+  border: 1px solid #9897f0;
+  border: outline;
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+.appointments-container {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 10px;
+}
+
+.starred-btn-clicked {
+  align-self: center;
+  padding: 10px;
+  border: 1px solid #9897f0;
+  border: outline;
+  border-radius: 15px;
+  background-color: transparent;
+  background-color: #9897f0;
+  color: white;
+}
