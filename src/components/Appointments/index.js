@@ -4,14 +4,7 @@ import {v4 as uuidv4} from 'uuid'
 import AppointmentItem from '../AppointmentItem'
 import './index.css'
 
-const initial = [
-  {
-    id: uuidv4(),
-    title: 'sdfsfasf',
-    date: '20-15-2023 Tuesday',
-    isStarred: false,
-  },
-]
+const initial = []
 
 class Appointment extends Component {
   state = {
