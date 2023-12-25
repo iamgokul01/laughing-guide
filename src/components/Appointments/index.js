@@ -25,6 +25,7 @@ class Appointment extends Component {
       new Date(event.target.value),
       'yyyy MM dd EEEE',
     )
+
     this.setState({
       date: formattedDate,
     })
@@ -41,6 +42,12 @@ class Appointment extends Component {
     this.setState(prevState => ({
       appointmentsList: [...prevState.appointmentsList, newData],
     }))
+
+    const titleEl = document.getElementById('inputTitle')
+    const dateEl = document.getElementById('inputDate')
+
+    titleEl.value = ''
+    dateEl.value = ''
   }
 
   toggleStarred = () => {
@@ -73,31 +80,35 @@ class Appointment extends Component {
   }
 
   render() {
-    const {isStarredOnly} = this.state
+    const {isStarredOnly, date, title} = this.state
     const finalAppointmentsList = this.checkLists()
     return (
       <div className="bg-container">
         <div className="app-container">
           <div className="add-app-section">
-            <div className="schedule-section">
+            <form className="schedule-section">
               <h1>Add Appointment</h1>
               <div className="input-field">
-                <label htmlFor="appointment">Title</label>
+                <label htmlFor="appointment-title">TITLE</label>
                 <input
                   type="text"
                   className="appointment-field"
-                  name="appointment"
-                  placeholder="TITLE"
+                  name="appointment-title"
+                  placeholder="Title"
                   onChange={this.saveTitle}
+                  id="inputTitle"
+                  value={title}
                 />
               </div>
               <div className="input-field">
-                <label htmlFor="appointment">Date</label>
+                <label htmlFor="appointment-date">Date</label>
                 <input
                   type="date"
                   className="appointment-field"
-                  name="appointment"
+                  name="appointment-date"
+                  id="inputDate"
                   onChange={this.saveDate}
+                  value={date}
                 />
               </div>
               <button
@@ -107,7 +118,7 @@ class Appointment extends Component {
               >
                 Add
               </button>
-            </div>
+            </form>
             <div className="image-section">
               <img
                 src="https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png"

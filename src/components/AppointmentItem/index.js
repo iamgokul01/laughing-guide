@@ -28,7 +28,7 @@ const AppoinetmentItem = props => {
                 ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
                 : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
             }
-            alt=""
+            alt="star"
           />
         </button>
       </div>
